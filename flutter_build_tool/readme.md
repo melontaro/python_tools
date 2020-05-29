@@ -3,7 +3,17 @@
 **用于批量修改flutter项目中发布时候各种项目中的文件修改**
 
 ### 打包命令:
-    pyinstaller -Fw main.py
-##### 参数:
-    -w: 不显示终端
-    -F: 将所有的库打包成一个单独的文件
+首先输入下面的命令，如果pyinstaller没有下载，请pip install pyinstaller
+
+pyinstaller -F -w -i img.ico main.py
+
+或
+
+pyinstaller -F -c -i img.ico main.py
+
+##### 参数说明：
+(建议先用-c，这样如果打包不成功的话可以看到哪里有错）
+-F 指只生成一个exe文件，不生成其他dll文件
+-w 不弹出命令行窗口
+-i 设定程序图标 ，其后面的ico文件就是程序图标main.py 就是要打包的程序
+-c 生成的exe文件打开方式为控制台打开。
