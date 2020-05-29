@@ -1,3 +1,5 @@
+# pyqt开发的Flutter工具
+    用于批量修改flutter项目中发布时候各种项目中的文件修改
 ## 打包命令:
     pyinstaller -Fw main.py
 ### 参数:
