@@ -5,11 +5,11 @@
 ### 打包命令:
 首先输入下面的命令，如果pyinstaller没有下载，请pip install pyinstaller
 
-pyinstaller -F -w -i img.ico main.py
+pyinstaller -F -w -i flutter.ico main.py
 
 或
 
-pyinstaller -F -c -i img.ico main.py
+pyinstaller -F -c -i flutter.ico main.py
 
 ##### 参数说明：
 (建议先用-c，这样如果打包不成功的话可以看到哪里有错）
