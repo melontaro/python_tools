@@ -11,11 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>flutter打包发布部分自动配置</string>
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>flutter.ico</normaloff>flutter.ico</iconset>
+    <normaloff>../../../../../../Users/Administrator/.designer/backup/flutter.ico</normaloff>../../../../../../Users/Administrator/.designer/backup/flutter.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QFormLayout" name="formLayout">
@@ -40,6 +40,42 @@
      <widget class="QPushButton" name="chooseDirBtn">
       <property name="text">
        <string>选择项目文件夹...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="replaceContentBtn">
+      <property name="text">
+       <string>替换内容</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="copykeytoandroidDir">
+      <property name="text">
+       <string>复制key到android文件夹</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLabel" name="label_3">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 0)</string>
+      </property>
+      <property name="text">
+       <string>按顺序执行上边的操作,之后到pubspect.yaml配置 图标,splash,之后,项目打开android项目,下载gradle等,不需要更新gradle.执行命令:flutter build apk </string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>flutter packages pub run flutter_launcher_icons:main
+####    启动页
+[flutter_native_splash](https://pub.dev/packages/flutter_native_splash)</string>
       </property>
      </widget>
     </item>
@@ -75,8 +111,42 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>replaceContentBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>replaceContent()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>447</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>315</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>copykeytoandroidDir</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>copykeytoandroiddir()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>491</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>496</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>chooseRootDir()</slot>
+  <slot>replaceContent()</slot>
+  <slot>copykeytoandroiddir()</slot>
  </slots>
 </ui>

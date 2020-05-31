@@ -1,0 +1,11 @@
+{
+  "android_path": "/android/",
+  "replace": {
+    "build_gradle": {
+      "path": "/android/app/build.gradle",
+      "content1": "   def keystoreProperties = new Properties()\n   def keystorePropertiesFile = rootProject.file('key.properties')\n   if (keystorePropertiesFile.exists()) {\n       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))\n   }\n\n",
+      "content2": "   signingConfigs {\n       release {\n           keyAlias keystoreProperties['keyAlias']\n           keyPassword keystoreProperties['keyPassword']\n           storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null\n           storePassword keystoreProperties['storePassword']\n       }\n   }\n   buildTypes {\n       release {\n           signingConfig signingConfigs.release\n       }\n   }\n"
+    }
+  }
+
+}

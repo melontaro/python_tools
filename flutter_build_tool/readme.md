@@ -17,3 +17,8 @@ pyinstaller -F -c -i flutter.ico main.py
 -w 不弹出命令行窗口
 -i 设定程序图标 ，其后面的ico文件就是程序图标main.py 就是要打包的程序
 -c 生成的exe文件打开方式为控制台打开。
+### 设置打包后的程序icon
+flutter packages get
+flutter packages pub run flutter_launcher_icons:main
+####    启动页
+[flutter_native_splash](https://pub.dev/packages/flutter_native_splash)
