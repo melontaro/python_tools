@@ -50,10 +50,13 @@ class Ui_MainWindow(object):
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 23))
         self.menubar.setObjectName("menubar")
+        self.menuabout = QtWidgets.QMenu(self.menubar)
+        self.menuabout.setObjectName("menuabout")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.menubar.addAction(self.menuabout.menuAction())
 
         self.retranslateUi(MainWindow)
         self.chooseDirBtn.clicked.connect(MainWindow.chooseRootDir)
@@ -68,7 +71,8 @@ class Ui_MainWindow(object):
         self.chooseDirBtn.setText(_translate("MainWindow", "选择项目文件夹..."))
         self.replaceContentBtn.setText(_translate("MainWindow", "替换内容"))
         self.copykeytoandroidDir.setText(_translate("MainWindow", "复制key到android文件夹"))
-        self.label_3.setText(_translate("MainWindow", "按顺序执行上边的操作,之后到pubspect.yaml配置 图标,splash,之后,项目打开android项目,下载gradle等,不需要更新gradle.执行命令:flutter build apk "))
+        self.label_3.setText(_translate("MainWindow", "按顺序执行上边的操作,之后到pubspect.yaml配置 图标,splash,之后,项目(打开android项目,下载gradle等,不需要更新gradle.此步骤不做也可以)执行命令:flutter build apk "))
         self.label_4.setText(_translate("MainWindow", "flutter packages pub run flutter_launcher_icons:main\n"
 "####    启动页\n"
 "[flutter_native_splash](https://pub.dev/packages/flutter_native_splash)"))
+        self.menuabout.setTitle(_translate("MainWindow", "about"))

@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
 import webbrowser
 import shutil
 import re
+import json
 
 class mianwindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -32,6 +33,7 @@ class mianwindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.replacebuildgradle_buildTypes()
         self.replacebuildgradle_ndk()
         self.replacebuildgradle_minsdkversion()
+        self.replace_appname()
 
 
     #replace android/app/build.gradle file
@@ -153,6 +155,33 @@ android {"""
             fin.close()
             # open the input file in write mode
             fin = open(buildgradlepath, "wt")
+            # overrite the input file with the resulting data
+            fin.write(data)
+            # close the file
+            fin.close()
+            return
+    def replace_appname(self):
+            configinfo=None
+            with open("config/config.json", 'r') as f:
+                configinfo = json.loads(f.read())
+            appname=configinfo['appname']
+            flutterpath = self.label.text()
+            mainfestpath = flutterpath + "/android/app/src/main/AndroidManifest.xml"
+
+            # read input file
+            fin = open(mainfestpath, "rt")
+            # read file contents to string
+            data = fin.read()
+            # replace all occurrences of the required string
+            compileStr = """        android:label=.*"""
+            strinfo = re.compile(compileStr)
+
+            str1 = """        android:label=\""""+appname+'\"'
+            data = strinfo.sub(str1, data)
+            # close the input file
+            fin.close()
+            # open the input file in write mode
+            fin = open(mainfestpath, "wt")
             # overrite the input file with the resulting data
             fin.write(data)
             # close the file

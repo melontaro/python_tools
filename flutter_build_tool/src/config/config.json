@@ -1,4 +1,5 @@
 {
+  "appname": "APP名称",
   "android_path": "/android/",
   "replace": {
     "build_gradle": {

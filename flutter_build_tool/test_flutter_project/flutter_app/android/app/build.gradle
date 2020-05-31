@@ -33,6 +33,30 @@ if (keystorePropertiesFile.exists()) {
 
 
 
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
 android {
     compileSdkVersion 28
 
@@ -51,6 +75,22 @@ android {
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        ndk{
+            abiFilters "armeabi-v7a"
+        }
+
+        ndk{
+            abiFilters "armeabi-v7a"
+        }
+
+        ndk{
+            abiFilters "armeabi-v7a"
+        }
+
+        ndk{
+            abiFilters "armeabi-v7a"
+        }
+
         ndk{
             abiFilters "armeabi-v7a"
         }

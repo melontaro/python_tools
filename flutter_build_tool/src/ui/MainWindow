@@ -63,7 +63,7 @@
        <string notr="true">color: rgb(255, 85, 0)</string>
       </property>
       <property name="text">
-       <string>按顺序执行上边的操作,之后到pubspect.yaml配置 图标,splash,之后,项目打开android项目,下载gradle等,不需要更新gradle.执行命令:flutter build apk </string>
+       <string>按顺序执行上边的操作,之后到pubspect.yaml配置 图标,splash,之后,项目(打开android项目,下载gradle等,不需要更新gradle.此步骤不做也可以)执行命令:flutter build apk </string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -90,6 +90,12 @@
      <height>23</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuabout">
+    <property name="title">
+     <string>about</string>
+    </property>
+   </widget>
+   <addaction name="menuabout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
