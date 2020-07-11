@@ -11,6 +11,12 @@ pyinstaller -F -w -i flutter.ico main.py
 
 pyinstaller -F -c -i flutter.ico main.py
 
+通过CMD命令,build命令  pyinstaller -D main.py
+
+C:\workspace\build\main 
+main.exe 
+查看错误
+
 ##### 参数说明：
 (建议先用-c，这样如果打包不成功的话可以看到哪里有错）
 -F 指只生成一个exe文件，不生成其他dll文件
