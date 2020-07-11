@@ -4,8 +4,9 @@
 
 ### 打包命令:
 首先输入下面的命令，如果pyinstaller没有下载，请pip install pyinstaller
-
-pyinstaller -F -c -i flutter.ico main.py --noconsole 
+pyinstaller -F -w -i flutter.ico main.py
+或
+pyinstaller -F -c -i flutter.ico main.py
 
 通过CMD命令,build命令  pyinstaller -D main.py
 
