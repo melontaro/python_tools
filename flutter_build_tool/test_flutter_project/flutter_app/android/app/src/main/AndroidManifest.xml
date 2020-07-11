@@ -1,3 +1,17 @@
+<!--
+  ~ /**
+  ~  * // +----------------------------------------------------------------------
+  ~  * // | XamClub [ WE CAN DO IT MORE SIMPLE ]
+  ~  * // +----------------------------------------------------------------------
+  ~  * // | Copyright (c) 2013-2020 http://www.xamclub.com All rights reserved.
+  ~  * // +----------------------------------------------------------------------
+  ~  * // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+  ~  * // +----------------------------------------------------------------------
+  ~  * // | Author: TouchAfflatus <axuyin@163.com>
+  ~  * // +----------------------------------------------------------------------
+  ~  */
+  -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.touchafflatus.flutterapp">
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that

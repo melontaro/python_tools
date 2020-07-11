@@ -1,3 +1,15 @@
+#  /**
+#   * // +----------------------------------------------------------------------
+#   * // | XamClub [ WE CAN DO IT MORE SIMPLE ]
+#   * // +----------------------------------------------------------------------
+#   * // | Copyright (c) 2013-2020 http://www.xamclub.com All rights reserved.
+#   * // +----------------------------------------------------------------------
+#   * // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+#   * // +----------------------------------------------------------------------
+#   * // | Author: TouchAfflatus <axuyin@163.com>
+#   * // +----------------------------------------------------------------------
+#   */
+
 import sys
 from ui.MainWindow import *
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog

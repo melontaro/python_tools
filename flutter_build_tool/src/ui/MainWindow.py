@@ -1,10 +1,22 @@
 # -*- coding: utf-8 -*-
 
+#  /**
+#   * // +----------------------------------------------------------------------
+#   * // | XamClub [ WE CAN DO IT MORE SIMPLE ]
+#   * // +----------------------------------------------------------------------
+#   * // | Copyright (c) 2013-2020 http://www.xamclub.com All rights reserved.
+#   * // +----------------------------------------------------------------------
+#   * // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+#   * // +----------------------------------------------------------------------
+#   * // | Author: TouchAfflatus <axuyin@163.com>
+#   * // +----------------------------------------------------------------------
+#   */
+
 # Form implementation generated from reading ui file 'MainWindow'
 #
 # Created by: PyQt5 UI code generator 5.13.0
 #
-# WARNING! All changes made in this file will be lost!
+#  WARNING! All changes made in this file will be lost!
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
