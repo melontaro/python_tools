@@ -50,7 +50,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>ProjectFolder:</string>
+     <string>ClientFolder:</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
@@ -69,8 +69,8 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>70</y>
+      <x>10</x>
+      <y>140</y>
       <width>101</width>
       <height>23</height>
      </rect>
@@ -82,8 +82,8 @@
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>70</y>
+      <x>120</x>
+      <y>140</y>
       <width>81</width>
       <height>23</height>
      </rect>
@@ -95,8 +95,8 @@
    <widget class="QPushButton" name="pushButton_5">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>70</y>
+      <x>210</x>
+      <y>140</y>
       <width>91</width>
       <height>23</height>
      </rect>
@@ -108,14 +108,66 @@
    <widget class="QPushButton" name="pushButton_6">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>370</x>
+      <y>140</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Proto2CS</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ServerFolder:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_server">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>70</y>
+      <width>421</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>70</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>选择server项目</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
       <y>70</y>
       <width>75</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>打开项目</string>
     </property>
    </widget>
   </widget>
@@ -172,8 +224,8 @@
    <slot>openHotfixMessage()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>71</x>
-     <y>105</y>
+     <x>61</x>
+     <y>185</y>
     </hint>
     <hint type="destinationlabel">
      <x>45</x>
@@ -188,8 +240,8 @@
    <slot>openInnerMessage()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>162</x>
-     <y>104</y>
+     <x>152</x>
+     <y>185</y>
     </hint>
     <hint type="destinationlabel">
      <x>154</x>
@@ -204,12 +256,60 @@
    <slot>openOuterMessage()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>257</x>
-     <y>105</y>
+     <x>247</x>
+     <y>185</y>
     </hint>
     <hint type="destinationlabel">
      <x>257</x>
      <y>154</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>proto2CS()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>418</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>377</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openServerProject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>595</x>
+     <y>107</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>545</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openServerFolder()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>707</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>687</x>
+     <y>225</y>
     </hint>
    </hints>
   </connection>
@@ -220,5 +320,8 @@
   <slot>openHotfixMessage()</slot>
   <slot>openInnerMessage()</slot>
   <slot>openOuterMessage()</slot>
+  <slot>proto2CS()</slot>
+  <slot>openServerProject()</slot>
+  <slot>openServerFolder()</slot>
  </slots>
 </ui>
